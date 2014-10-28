@@ -121,6 +121,10 @@
 					break;
 				case 2:
 					temp_ele=patient_queue.takeFromFront();
+					switch(temp_ele.condition){
+					case
+					}
+
 					//examine patient
 					break;
 				case 3:
