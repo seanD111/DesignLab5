@@ -121,9 +121,18 @@
 					break;
 				case 2:
 					temp_ele=patient_queue.takeFromFront();
-//					switch(temp_ele.condition){
-//					case:
-//					}
+					switch(temp_ele.condition){
+						case UNKNOWN:
+							break;
+						case RELEASE:
+							break;
+						case CHECKUP:
+							break;
+						case ADMIT:
+							break;
+						case LABOUR:
+							break;
+					}
 
 					//examine patient
 					break;
