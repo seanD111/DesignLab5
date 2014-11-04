@@ -40,7 +40,11 @@ enum_Status patient::examinepatients()//function for adding patients
 	switch (condition)
 	{
 	case UNKNOWN:
+
 		condition= rand()%4+1;
+
+		//rand()%
+
 		break;
 	case RELEASE:
 		cout << "Patient Released\n";//kkkk
