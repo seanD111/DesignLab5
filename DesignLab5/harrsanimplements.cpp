@@ -11,7 +11,8 @@
 #include <sstream>
 #include <ctime>
 #include <cmath>
-#include "myfunctions.h"
+#include "harrsanfunctions.h"
+#include "seanfunctions.h"
 using namespace std;
 
 patient::patient()
@@ -27,7 +28,7 @@ enum_Status patient::examinepatients()//function for adding patients
 	switch (condition)
 	{
 	case UNKNOWN:
-		//diagnose or randomize function
+		//rand()%
 		break;
 	case RELEASE:
 		cout << "Patient Released\n";

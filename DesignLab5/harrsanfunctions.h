@@ -11,7 +11,7 @@
 #include <string>
 #include <iomanip>
 #include <sstream>
-
+#include "seanfunctions.h"
 using namespace std;
 
 enum enum_Status{
