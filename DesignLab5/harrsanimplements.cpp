@@ -18,6 +18,13 @@ using namespace std;
 patient::patient()
 {
 	condition= UNKNOWN;
+	first_name="";
+	last_name="";
+	healthcard_number=0;
+
+	bed_number=0;
+	contraction_rate=0;
+	cervix_dilation=0;
 
 }
 
