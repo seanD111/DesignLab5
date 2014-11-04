@@ -5,8 +5,8 @@
  *      Author: sddelong
  */
 
-#ifndef HEADER_H_
-#define HEADER_H_
+#ifndef SEANFUNCTIONS_H_
+#define SEANFUNCTIONS_H_
 #include <iostream>
 #include <string>
 #include <iomanip>
@@ -18,22 +18,15 @@
 
 #define QUEUE_SIZE 10 //default queue size is 10 elements
 
-enum enum_Status{
-	UNKNOWN,
-	RELEASE,
-	CHECKUP,
-	ADMIT,
-	LABOUR
-};
+
 
 using namespace std;
 
 
 
-
+typedef patient element;
 
 //The registry (queue) class//
-typedef patient element;
 class registry{
 private:
 	//size and back are needed for queue; since the queue will be shifted each time
