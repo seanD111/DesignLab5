@@ -57,6 +57,7 @@ enum_Status patient::examinepatients()//function for adding patients
 
 	}
 	return condition;
+}
 
 //	cin.ignore();
 //	getline(cin, str_input);

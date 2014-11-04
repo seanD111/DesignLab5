@@ -13,7 +13,7 @@
 #include <sstream>
 #include <ctime>
 #include <fstream>
-#include "harrsanfunctions.h"
+
 
 
 #define QUEUE_SIZE 10 //default queue size is 10 elements
@@ -22,7 +22,7 @@
 
 using namespace std;
 
-
+class patient;
 
 typedef patient element;
 
