@@ -108,14 +108,16 @@
 
 	user::user(): str_input(""), int_input(0), patient_queue()
 	{
+		temp_ele=new element;
 	}
 
 	user::user(int a): str_input(""), int_input(0), patient_queue(a)
 	{
+		temp_ele=new element;
 	}
 
 	user::~user(){
-
+		delete temp_ele;
 	}
 
 	void user::main_menu(){
@@ -133,15 +135,15 @@
 					getline(cin, str_input);
 
 					strstr.str(str_input);
-					strstr>> temp_ele.first_name;
-					strstr>> temp_ele.last_name;
-					strstr>> temp_ele.healthcard_number;
-					patient_queue.addToBack(temp_ele);
+					strstr>> temp_ele->first_name;
+					strstr>> temp_ele->last_name;
+					strstr>> temp_ele->healthcard_number;
+					patient_queue.addToBack(*temp_ele);
 
 					break;
 				case 2:
-					temp_ele=patient_queue.takeFromFront();
-					switch(temp_ele.condition){
+					*temp_ele=patient_queue.takeFromFront();
+					switch(temp_ele->condition){
 						case UNKNOWN:
 							break;
 						case RELEASE:

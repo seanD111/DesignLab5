@@ -64,7 +64,7 @@ private:
 	string str_input;
 	int int_input;
 	registry patient_queue;
-	element temp_ele;
+	element *temp_ele;
 
 
 
