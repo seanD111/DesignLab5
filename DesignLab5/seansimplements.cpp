@@ -7,7 +7,7 @@
 
 #include "seanfunctions.h"
 #include "harrsanfunctions.h"
-#include "harrsanimplements.cpp"
+
 
 /**************REGISTRY IMPLMENTATION********************/
 //Constructors//
@@ -91,13 +91,13 @@
 		cout<<"\n";
 		largestDil=0;
 		for(int i=0; i<back; i++){
-			if (queue[largestDil].dilation<queue[i].dilation){
+			if (queue[largestDil].cervix_dilation<queue[i].cervix_dilation){
 				largestDil=i;
 			}
 		}
 		cout<<setw(30)<<"Most Urgent Patient"<<setw(25)<<"Cervical Dilation\n";
 		for(int i=0; i<56; i++) cout<<"-";
-		cout<<"\n"<< setw(30)<<queue[largestDil].first_name<<queue[largestDil].last_name<<setw(25)<<queue[largestDil].dilation;
+		cout<<"\n"<< setw(30)<<queue[largestDil].first_name<<queue[largestDil].last_name<<setw(25)<<queue[largestDil].cervix_dilation;
 		cout<<"\n\n";
 	}
 

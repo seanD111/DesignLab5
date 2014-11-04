@@ -13,6 +13,7 @@
 #include <sstream>
 #include <ctime>
 #include <fstream>
+#include "harrsanfunctions.h"
 
 
 #define QUEUE_SIZE 10 //default queue size is 10 elements
@@ -26,13 +27,7 @@ enum enum_Status{
 };
 
 using namespace std;
-//Harrsans class//
-class patient {
-public:
-	string first_name;
-	string last_name;
-	string healthcard_number;
-};
+
 
 
 
