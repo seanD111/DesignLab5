@@ -97,7 +97,7 @@
 		}
 		cout<<setw(30)<<"Most Urgent Patient"<<setw(25)<<"Cervical Dilation\n";
 		for(int i=0; i<56; i++) cout<<"-";
-		cout<<"\n"<< setw(30)<<queue[largestDil].first_name<<queue[largestDil].last_name<<setw(25)<<queue[largestDil].cervix_dilation;
+		cout<<"\n"<< setw(30)<<queue[largestDil].first_name<<" "<<queue[largestDil].last_name<<setw(25)<<queue[largestDil].cervix_dilation;
 		cout<<"\n\n";
 	}
 
