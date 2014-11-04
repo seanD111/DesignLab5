@@ -69,18 +69,17 @@ enum_Status patient::examinepatients()//function for adding patients
 
 
 
-/*enum my_type {
-    a, b, c, d,
-    last
-};
+
 
 void f() {
     my_type test = static_cast<my_type>(rand() % last);
 }*/
 
-
-
+patients::showpatients()
+{
+	cout<<
 }
+
 
 
 
