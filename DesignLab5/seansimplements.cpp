@@ -5,7 +5,7 @@
  *      Author: sddelong & harrsan
  */
 
-#include "header.h"
+#include "seanfunctions.h"
 
 /**************REGISTRY IMPLMENTATION********************/
 //Constructors//
