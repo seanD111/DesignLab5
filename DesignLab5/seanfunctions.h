@@ -5,8 +5,8 @@
  *      Author: sddelong
  */
 
-#ifndef HEADER_H_
-#define HEADER_H_
+#ifndef SEANFUNCTIONS_H_
+#define SEANFUNCTIONS_H_
 #include <iostream>
 #include <string>
 #include <iomanip>
@@ -24,7 +24,7 @@ using namespace std;
 
 
 
-
+typedef patient element;
 
 //The registry (queue) class//
 class registry{
