@@ -38,6 +38,7 @@ enum_Status patient::examinepatients()//function for adding patients
 	switch (condition)
 	{
 	case UNKNOWN:
+
 		//rand()%
 		break;
 	case RELEASE:
