@@ -53,7 +53,7 @@ void showpatients();
 
 
 };
-
+typedef patient element;
 
 
 #endif /* MYFUNCTIONS_H_ */

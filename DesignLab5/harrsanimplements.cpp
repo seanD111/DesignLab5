@@ -49,6 +49,8 @@ enum_Status patient::examinepatients()//function for adding patients
 	return condition;
 
 
+
+
 /*enum my_type {
     a, b, c, d,
     last
