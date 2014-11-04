@@ -5,6 +5,7 @@
  *      Author: sddelong
  */
 #include "seanfunctions.h"
+
 int main(){
 	int size=QUEUE_SIZE;
 	cout<<"Enter the size of the queue as a positive integer: ";

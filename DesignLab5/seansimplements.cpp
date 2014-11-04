@@ -6,6 +6,8 @@
  */
 
 #include "seanfunctions.h"
+#include "harrsanfunctions.h"
+#include "harrsanimplements.cpp"
 
 /**************REGISTRY IMPLMENTATION********************/
 //Constructors//
