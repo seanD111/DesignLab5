@@ -27,7 +27,10 @@ patient::patient()
 	cervix_dilation=0;
 
 }
+patient::~patient()
+{
 
+}
 
 enum_Status patient::examinepatients()//function for adding patients
 
