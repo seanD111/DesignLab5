@@ -13,11 +13,13 @@
 		size=QUEUE_SIZE;
 		back=-1;
 		queue=new element[size];
+		largestDil=0;
 	}
 	registry::registry(int a){
 		size=a;
 		back=-1;
 		queue=new element[size];
+		largestDil=0;
 		}
 //Destructor//
 	registry::~registry(){
