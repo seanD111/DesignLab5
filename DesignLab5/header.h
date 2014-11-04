@@ -43,7 +43,7 @@ class registry{
 private:
 	//size and back are needed for queue; since the queue will be shifted each time
 	//a patient is removed, a front isn't needed
-	int size, back;
+	int size, back, largestDil;
 	element * queue;
 
 public:
@@ -65,6 +65,8 @@ public:
 
 	//this shows the elements in the queue
 	void showQueue();
+
+	void mostUrgent();
 
 };
 

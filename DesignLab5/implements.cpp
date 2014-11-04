@@ -18,7 +18,7 @@
 		size=a;
 		back=-1;
 		queue=new element[size];
-	}
+		}
 //Destructor//
 	registry::~registry(){
 		delete[] queue;
@@ -80,9 +80,25 @@
 			cout<<"\n";
 		}
 	}
+	//most urgent function; needs to://
+	//a)go through the queue, searching for patient with highest dilation
+	//b)report name and dilation status
+	void registry::mostUrgent(){
+		cout<<"\n";
+		largestDil=0;
+		for(int i=0; i<back; i++){
+			if (queue[largestDil].dilation<queue[i].dilation){
+				largestDil=i;
+			}
+		}
+		cout<<setw(30)<<"Most Urgent Patient"<<setw(25)<<"Cervical Dilation\n";
+		for(int i=0; i<56; i++) cout<<"-";
+		cout<<"\n"<< setw(30)<<queue[largestDil].first_name<<queue[largestDil].last_name<<setw(25)<<queue[largestDil].dilation;
+		cout<<"\n\n";
+	}
 
 
-/****************MENU IMPLEMENTATION*************************/
+/****************USER IMPLEMENTATION*************************/
 
 
 
