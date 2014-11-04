@@ -86,19 +86,19 @@
 
 
 
-	menu::menu(): str_input(""), int_input(0), patient_queue()
+	user::user(): str_input(""), int_input(0), patient_queue()
 	{
 	}
 
-	menu::menu(int a): str_input(""), int_input(0), patient_queue(a)
+	user::user(int a): str_input(""), int_input(0), patient_queue(a)
 	{
 	}
 
-	menu::~menu(){
+	user::~user(){
 
 	}
 
-	void menu::main_menu(){
+	void user::main_menu(){
 		do {
 			stringstream strstr;
 			cout<<"\n\n|============================== Main Menu ==============================|\nPlease enter the number of the task you wish to do:\n";
@@ -149,7 +149,7 @@
 
 	}
 
-	void menu::help_prompt(int err){
+	void user::help_prompt(int err){
 
 	}
 

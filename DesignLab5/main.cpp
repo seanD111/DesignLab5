@@ -10,7 +10,7 @@ int main(){
 	cout<<"Enter the size of the queue as a positive integer: ";
 	cin>>size;
 	cout<<"\n\n\n\n\n";
-	menu program_menu(size);
+	user program_menu(size);
 	program_menu.main_menu();
 	return 0;
 }

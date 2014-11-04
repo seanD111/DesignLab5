@@ -69,7 +69,7 @@ public:
 };
 
 //The menu class//
-class menu{
+class user{
 private:
 	string str_input;
 	int int_input;
@@ -80,9 +80,9 @@ private:
 
 public:
 	//Constructor & Destructor//
-		menu();
-		menu(int);
-		~menu();
+		user();
+		user(int);
+		~user();
 
 	//Functions//
 		//help function; takes an int and gives a help message, according to what help is needed
