@@ -10,10 +10,11 @@
 #include <iomanip>
 #include <sstream>
 #include <ctime>
-#include <cmath>
+#include <cstdlib>
 #include "harrsanfunctions.h"
 #include "seanfunctions.h"
 using namespace std;
+
 
 patient::patient()
 {
@@ -35,14 +36,14 @@ patient::~patient()
 enum_Status patient::examinepatients()//function for adding patients
 
 {
+	srand(time(NULL));
 	switch (condition)
 	{
 	case UNKNOWN:
-		//rand()%
+		condition= rand()%4+1;
 		break;
 	case RELEASE:
 		cout << "Patient Released\n";
-		return condition;
 
 		break;
 	case CHECKUP:
