@@ -120,7 +120,7 @@
 		do {
 			stringstream strstr;
 			cout<<"\n\n|============================== Main Menu ==============================|\nPlease enter the number of the task you wish to do:\n";
-			cout<<"\t0: Exit Program\n\t1: Add a Patient to Queue\n\t2: Examine Next Patient\n\t3: Show Patient Queue\n\t4: Show specific Patient Information\n";
+			cout<<"\t0: Exit Program\n\t1: Add a Patient to Queue\n\t2: Examine Next Patient\n\t3: Show Patient Queue\n\t4: Show specific Patient Information\n\t5: Show Most Urgent Patient\n";
 			cin>>int_input;
 			switch(int_input){
 				case 1:
@@ -161,6 +161,10 @@
 				case 4:
 					cout<<"\n\n|============================== Patient Detail ==============================|\n";
 					//show patient function
+					break;
+				case 5:
+					cout<<"\n\n|============================== Most Urgent Patient ==============================|\n";
+					patient_queue.mostUrgent();
 					break;
 			}
 		}while (int_input!=0);
