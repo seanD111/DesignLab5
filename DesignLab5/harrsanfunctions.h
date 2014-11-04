@@ -5,8 +5,8 @@
  *      Author: Harrsan
  */
 
-#ifndef MYFUNCTIONS_H_
-#define MYFUNCTIONS_H_
+#ifndef HARRSANFUNCTIONS_H_
+#define HARRSANFUNCTIONS_H_
 #include <iostream>
 #include <string>
 #include <iomanip>

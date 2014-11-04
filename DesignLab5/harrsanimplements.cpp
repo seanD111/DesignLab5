@@ -48,6 +48,14 @@ enum_Status patient::examinepatients()//function for adding patients
 	}
 	return condition;
 
+//	cin.ignore();
+//	getline(cin, str_input);
+//
+//	strstr.str(str_input);
+//	strstr>> temp_ele.first_name;
+//	strstr>> temp_ele.last_name;
+//	strstr>> temp_ele.healthcard_number;
+//	patient_queue.addToBack(temp_ele);
 
 
 
