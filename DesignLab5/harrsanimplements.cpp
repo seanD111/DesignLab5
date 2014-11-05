@@ -15,7 +15,9 @@
 #include "seanfunctions.h"
 using namespace std;
 
-
+//The constructor for patient class which initializes the values for condition as "UNKNOWN",
+//the first and last name as blanks, the healthcard number, bed number, contraction rate,
+//and cervix dilation as 0.
 patient::patient()
 {
 	condition= UNKNOWN;
@@ -32,26 +34,24 @@ patient::~patient()
 {
 
 }
-
+//Examine patients function creates initial status of incoming patients
 enum_Status patient::examinepatients()//function for adding patients
 
 {
 	srand(time(NULL));
-	switch (condition)
+	switch (condition)//Switch case is used to select a randomized condition, and the various processes that follow each condition
 	{
 	case UNKNOWN:
 
-		condition= enum_Status(rand()%4+1);
-
-		//rand()%
+		condition= enum_Status(rand()%4+1);//chooses random condition from enum_Status
 
 		break;
 	case RELEASE:
-		cout << "Patient Released\n";//kkkk
+		cout << "Patient Released\n";//if condition is released the "Patient Released" is printed
 
 		break;
 	case CHECKUP:
-		cervix_dilation=0;
+		cervix_dilation=0;//cervix dilation will be 0
 		break;
 	case ADMIT:
 		cout<<"ADMITTED TO BIRTHING UNIT\n";
