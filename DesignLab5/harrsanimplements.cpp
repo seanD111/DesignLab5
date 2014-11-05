@@ -41,7 +41,7 @@ enum_Status patient::examinepatients()//function for adding patients
 	{
 	case UNKNOWN:
 
-		condition= rand()%4+1;
+		condition= enum_Status(rand()%4+1);
 
 		//rand()%
 
