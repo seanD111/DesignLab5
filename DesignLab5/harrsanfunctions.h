@@ -17,9 +17,10 @@ using namespace std;
 enum enum_Status{
 	UNKNOWN,
 	RELEASE,
+	LABOUR,
 	CHECKUP,
 	ADMIT,
-	LABOUR,
+
 };
 
 

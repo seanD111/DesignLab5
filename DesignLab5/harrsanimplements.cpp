@@ -26,7 +26,7 @@ patient::patient()
 	healthcard_number=0;
 
 	bed_number=0;
-	contraction_rate=0;
+	contraction_rate=7;
 	cervix_dilation=0;
 
 }
@@ -51,12 +51,16 @@ enum_Status patient::examinepatients()//function for adding patients
 
 		break;
 	case CHECKUP:
-		cervix_dilation=0;//cervix dilation will be 0
+		condition=enum_Status(rand()%2+1);
+
 		break;
 	case ADMIT:
 		cout<<"ADMITTED TO BIRTHING UNIT\n";
 		break;
 	case LABOUR:
+		cout<<"Input cervix dilation and contraction rate\n";
+		cin >>cervix_dilation;
+		cin >> contraction_rate;
 		if (cervix_dilation >=4 && contraction_rate< 4)
 		condition=ADMIT;
 
