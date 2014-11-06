@@ -77,14 +77,17 @@ enum_Status patient::examinepatients()//function for adding patients
 
 
 
-//void f() {
-//    my_type test = static_cast<my_type>(rand() % last);
-//}*/
+
 //
-//patients::showpatients()
-//{
-//	cout<<
-//}
+void patient::showpatients()
+{
+
+	cout<<"[Show Patients]";
+	//cout<<"First Name"<<setw(5)<<"Last Name"<<setw(5)<<"Health Card Number"<<setw(5)<<"Bed Number"<<setw(5)<<"Contraction Rate"<<setw(5)<<"Cervix Dilation\n";
+	for(int j=0; j<68; j++) cout<<"=";
+	cout<<first_name<<setw(5)<<last_name<<setw(5)<<healthcard_number<<setw(5)<<bed_number<<setw(5)<<contraction_rate<<setw(5)<<cervix_dilation<<setw(5);
+
+}
 
 
 

@@ -44,10 +44,8 @@ int cervix_dilation;//each variable initialized in patient class
 enum_Status examinepatients();
 void showpatients();
 
-//includes first name, last name, health card number, condition, bed number, contraction rate(minutes between contractions)
-//cervix dilation(0-10cm)
-//function which reads patient
-//function
+
+
 
 
 };
