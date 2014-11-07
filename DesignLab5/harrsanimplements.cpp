@@ -34,6 +34,16 @@ patient::~patient()
 {
 
 }
+void patient::resetpatient(){
+	condition= UNKNOWN;
+	first_name="";
+	last_name="";
+	healthcard_number=0;
+
+	bed_number=0;
+	contraction_rate=7;
+	cervix_dilation=0;
+}
 void patient::printstatus(){ //function that does the switch logic autmatically
 	switch(condition){
 	case UNKNOWN:

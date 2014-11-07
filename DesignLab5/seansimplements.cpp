@@ -33,7 +33,7 @@
 	//a)check if queue is full
 		//if so, return false and don't add an element
 	//b)increase the back counter
-	//c)set the new element to index 'back'
+	//c)then set the new element to index 'back'
 	bool registry::addToBack(element eleToBack){
 		bool valid=true;
 
@@ -83,7 +83,7 @@
 		for(int i=0; i<76; i++) cout<<"-";
 		cout<<"\n";
 		for(int i=0; i<=back; i++){
-			cout<<setw(20)<<i<<setw(30)<<queue[i].last_name<<", "<<queue[i].first_name<<setw(15);
+			cout<<setw(20)<<i<<setw(30)<<queue[i].last_name + ", "+ queue[i].first_name<<setw(24);
 			queue[i].printstatus();
 			cout<<"\n";
 		}
@@ -99,9 +99,10 @@
 				largestDil=i;
 			}
 		}
-		cout<<setw(30)<<"Most Urgent Patient"<<setw(25)<<"Cervical Dilation\n";
-		for(int i=0; i<56; i++) cout<<"-";
-		cout<<"\n"<< setw(23)<<queue[largestDil].first_name<<" "<<queue[largestDil].last_name<<setw(25)<<queue[largestDil].cervix_dilation;
+		cout<<setw(30)<<"Most Urgent Patient"<<setw(25)<<"Cervical Dilation"<<setw(25)<<"Condition\n";
+		for(int i=0; i<80; i++) cout<<"-";
+		cout<<"\n"<< setw(28)<<queue[largestDil].first_name<<" "<<queue[largestDil].last_name<<setw(25)<<queue[largestDil].cervix_dilation<<setw(24);
+		queue[largestDil].printstatus();
 		cout<<"\n\n";
 	}
 
@@ -129,6 +130,7 @@
 	void user::main_menu(){
 		do {
 			stringstream strstr;
+			temp_ele->resetpatient();
 			cout<<"\n\n|============================== Main Menu ==============================|\nPlease enter the number of the task you wish to do:\n";
 			cout<<"\t0: Exit Program\n\t1: Add a Patient to Queue\n\t2: Examine Next Patient\n\t3: Show Patient Queue\n\t4: Show specific Patient Information\n\t5: Show Most Urgent Patient\n";
 			cin>>menu_select;

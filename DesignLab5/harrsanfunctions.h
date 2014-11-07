@@ -45,6 +45,7 @@ int cervix_dilation;//each variable initialized in patient class
 enum_Status examinepatients();
 void printstatus();
 void showpatients();
+void resetpatient();
 
 
 
