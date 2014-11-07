@@ -34,7 +34,7 @@ patient::~patient()
 {
 
 }
-void patient::printstatus(){
+void patient::printstatus(){ //function that does the switch logic autmatically
 	switch(condition){
 	case UNKNOWN:
 		cout<<"UNKNOWN";
