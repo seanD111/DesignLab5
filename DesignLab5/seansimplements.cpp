@@ -48,6 +48,10 @@
 		return(valid);
 	}
 
+	int registry::backOfQueue(){
+		return back;
+	}
+
 	//take from front function; needs to://
 	//a)check if queue is empty
 		//if so, don't take an element
@@ -80,7 +84,7 @@
 		cout<<"\n";
 		for(int i=0; i<=back; i++){
 			cout<<setw(20)<<i<<setw(30)<<queue[i].last_name<<", "<<queue[i].first_name<<setw(15);
-			//queue[i].printstatus();
+			queue[i].printstatus();
 			cout<<"\n";
 		}
 	}
@@ -90,28 +94,30 @@
 	void registry::mostUrgent(){
 		cout<<"\n";
 		largestDil=0;
-		for(int i=0; i<back; i++){
+		for(int i=0; i<=back; i++){
 			if (queue[largestDil].cervix_dilation<queue[i].cervix_dilation){
 				largestDil=i;
 			}
 		}
 		cout<<setw(30)<<"Most Urgent Patient"<<setw(25)<<"Cervical Dilation\n";
 		for(int i=0; i<56; i++) cout<<"-";
-		cout<<"\n"<< setw(30)<<queue[largestDil].first_name<<" "<<queue[largestDil].last_name<<setw(25)<<queue[largestDil].cervix_dilation;
+		cout<<"\n"<< setw(23)<<queue[largestDil].first_name<<" "<<queue[largestDil].last_name<<setw(25)<<queue[largestDil].cervix_dilation;
 		cout<<"\n\n";
 	}
 
-
+	element registry::findEle(int a){
+		return queue[a];
+	}
 /****************USER IMPLEMENTATION*************************/
 
 
 
-	user::user(): str_input(""), int_input(0), patient_queue()
+	user::user(): str_input(""), int_input(0), menu_select(0), patient_queue()
 	{
 		temp_ele=new element;
 	}
 
-	user::user(int a): str_input(""), int_input(0), patient_queue(a)
+	user::user(int a): str_input(""), int_input(0), menu_select(0), patient_queue(a)
 	{
 		temp_ele=new element;
 	}
@@ -125,8 +131,8 @@
 			stringstream strstr;
 			cout<<"\n\n|============================== Main Menu ==============================|\nPlease enter the number of the task you wish to do:\n";
 			cout<<"\t0: Exit Program\n\t1: Add a Patient to Queue\n\t2: Examine Next Patient\n\t3: Show Patient Queue\n\t4: Show specific Patient Information\n\t5: Show Most Urgent Patient\n";
-			cin>>int_input;
-			switch(int_input){
+			cin>>menu_select;
+			switch(menu_select){
 				case 1:
 
 					cout<<"\n\n|============================== Add Patient ==============================|\n";
@@ -142,19 +148,28 @@
 
 					break;
 				case 2:
+					if(patient_queue.backOfQueue()>-1){
 					*temp_ele=patient_queue.takeFromFront();
-					switch(temp_ele->condition){
+
+
+					switch(temp_ele->examinepatients()){
 						case UNKNOWN:
+							patient_queue.addToBack(*temp_ele);
 							break;
-						case RELEASE:
-							break;
+
 						case CHECKUP:
+							patient_queue.addToBack(*temp_ele);
 							break;
-						case ADMIT:
-							break;
+
 						case LABOUR:
+							patient_queue.addToBack(*temp_ele);
+							break;
+						default:
 							break;
 					}
+					}
+					else cout<<"\n\nNo Patients in Queue!\n\n";
+
 
 					//examine patient
 					break;
@@ -164,14 +179,30 @@
 					break;
 				case 4:
 					cout<<"\n\n|============================== Patient Detail ==============================|\n";
-					//show patient function
+
+						cout<<"Enter the patient's position in the queue:\n";
+						cin>>int_input;
+					if (int_input<0||int_input>patient_queue.backOfQueue()){
+						cout<<"\n\nNumber entered is not valid!\n\n";
+					}
+					else{
+
+					cout<<setw(20)<<"First Name"<<setw(20)<<"Last Name"<<setw(20)<<"Healthcard Number"<<setw(20)<<"Bed Number"<<setw(20)<<"Contraction Rate"<<setw(20)<<"Cervix Dilation\n";
+					for(int i=0; i<120; i++) cout<<"-";
+					cout<<"\n";
+					*temp_ele=patient_queue.findEle(int_input);
+					temp_ele->showpatients();
+					cout<<"\n\n";
+					}
+
+
 					break;
 				case 5:
 					cout<<"\n\n|============================== Most Urgent Patient ==============================|\n";
 					patient_queue.mostUrgent();
 					break;
 			}
-		}while (int_input!=0);
+		}while (menu_select!=0);
 
 	}
 

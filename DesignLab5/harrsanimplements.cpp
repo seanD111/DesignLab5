@@ -34,10 +34,30 @@ patient::~patient()
 {
 
 }
+void patient::printstatus(){
+	switch(condition){
+	case UNKNOWN:
+		cout<<"UNKNOWN";
+		break;
+	case RELEASE:
+		cout<<"RELEASE";
+		break;
+	case CHECKUP:
+		cout<<"CHECKUP";
+		break;
+	case ADMIT:
+		cout<<"ADMIT";
+		break;
+	case LABOUR:
+		cout<<"LABOUR";
+		break;
+	}
+}
 //Examine patients function creates initial status of incoming patients
 enum_Status patient::examinepatients()//function for adding patients
 
 {
+	enum_Status temp=condition;
 	srand(time(NULL));
 	switch (condition)//Switch case is used to select a randomized condition, and the various processes that follow each condition
 	{
@@ -65,7 +85,7 @@ enum_Status patient::examinepatients()//function for adding patients
 		condition=ADMIT;
 
 	}
-	return condition;
+	return temp;
 }
 
 

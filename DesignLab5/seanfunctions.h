@@ -53,7 +53,8 @@ public:
 
 	//this shows the elements in the queue
 	void showQueue();
-
+	element findEle(int);
+	int backOfQueue();
 	void mostUrgent();
 
 };
@@ -63,6 +64,7 @@ class user{
 private:
 	string str_input;
 	int int_input;
+	int menu_select;
 	registry patient_queue;
 	element *temp_ele;
 
