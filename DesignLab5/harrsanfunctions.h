@@ -13,8 +13,8 @@
 #include <sstream>
 
 using namespace std;
-//commment
-enum enum_Status{
+
+enum enum_Status{//enumerated values set for condition
 	UNKNOWN,
 	RELEASE,
 	LABOUR,
@@ -24,7 +24,7 @@ enum enum_Status{
 };
 
 
-class patient{
+class patient{//patient class stores information in class
 
 
 public:
@@ -42,17 +42,17 @@ int contraction_rate;
 int cervix_dilation;//each variable initialized in patient class
 
 
-enum_Status examinepatients();
-void printstatus();
-void showpatients();
-void resetpatient();
+enum_Status examinepatients();//shows patient class
+void printstatus();//prints condition
+void showpatients();//prints patient information in one line
+void resetpatient();//clears patient information
 
 
 
 
 
 };
-typedef patient element;
+typedef patient element;//use of patient class in registry
 
 
 #endif /* MYFUNCTIONS_H_ */
