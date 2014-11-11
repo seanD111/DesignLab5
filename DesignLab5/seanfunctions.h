@@ -53,19 +53,29 @@ public:
 
 	//this shows the elements in the queue
 	void showQueue();
+
+	//this returns a patient, depending on the inputted index
 	element findEle(int);
+
+	//this returns the back index
 	int backOfQueue();
+
+	//this finds the patient with the highest cervical dilation
 	void mostUrgent();
 
 };
 
-//The menu class//
+//The user class//
 class user{
 private:
+	//str_input, int_input, and menu_select are user-inputted values
 	string str_input;
 	int int_input;
 	int menu_select;
+	//the user acesses an instance of the registry queue, where all patients are stored
 	registry patient_queue;
+
+	//a temporary patient is needed in this class to store patient-related info.
 	element *temp_ele;
 
 

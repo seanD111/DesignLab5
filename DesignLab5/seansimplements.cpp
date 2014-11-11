@@ -48,6 +48,7 @@
 		return(valid);
 	}
 
+	//back of queue function; returns the private variable 'back'//
 	int registry::backOfQueue(){
 		return back;
 	}
@@ -106,6 +107,7 @@
 		cout<<"\n\n";
 	}
 
+	//find element function; needs to return the patient at index 'a'//
 	element registry::findEle(int a){
 		return queue[a];
 	}
