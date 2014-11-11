@@ -191,8 +191,9 @@
 					}
 					else{
 
-					cout<<setw(20)<<"First Name"<<setw(20)<<"Last Name"<<setw(20)<<"Healthcard Number"<<setw(20)<<"Bed Number"<<setw(20)<<"Contraction Rate"<<setw(20)<<"Cervix Dilation\n";
-					for(int i=0; i<120; i++) cout<<"-";
+					cout<<setw(20)<<"First Name"<<setw(20)<<"Last Name"<<setw(20)<<"Healthcard Number"<<setw(20)<<"Bed Number"<<setw(20)<<"Contraction Rate"<<setw(20)<<"Cervix Dilation"<<setw(20)<<"Condition\n";
+
+					for(int i=0; i<140; i++) cout<<"-";
 					cout<<"\n";
 					*temp_ele=patient_queue.findEle(int_input);
 					temp_ele->showpatients();
