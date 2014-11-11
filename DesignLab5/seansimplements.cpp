@@ -130,17 +130,23 @@
 	}
 
 	void user::main_menu(){
+		// main menu loop
 		do {
 			stringstream strstr;
 			temp_ele->resetpatient();
 			cout<<"\n\n|============================== Main Menu ==============================|\nPlease enter the number of the task you wish to do:\n";
 			cout<<"\t0: Exit Program\n\t1: Add a Patient to Queue\n\t2: Examine Next Patient\n\t3: Show Patient Queue\n\t4: Show specific Patient Information\n\t5: Show Most Urgent Patient\n";
+
+			//ask user for input; do a function depending on input
 			cin>>menu_select;
 			switch(menu_select){
+				//add patient
 				case 1:
 
 					cout<<"\n\n|============================== Add Patient ==============================|\n";
 					cout<<"Enter the patient's info, in form: [First Name] [Last Name] [Health card #]\n";
+
+					//use stringstream to get input
 					cin.ignore();
 					getline(cin, str_input);
 
@@ -148,14 +154,17 @@
 					strstr>> temp_ele->first_name;
 					strstr>> temp_ele->last_name;
 					strstr>> temp_ele->healthcard_number;
+					//add the patient (stored in temp_ele) to the back of the queue
 					patient_queue.addToBack(*temp_ele);
 
 					break;
+				//examine patient
 				case 2:
+					//if the queues not empty, take the firstmost one
 					if(patient_queue.backOfQueue()>-1){
 					*temp_ele=patient_queue.takeFromFront();
 
-
+					//test the patient's status while examining them; they get sent to the back sometimes
 					switch(temp_ele->examinepatients()){
 						case UNKNOWN:
 							patient_queue.addToBack(*temp_ele);
@@ -168,26 +177,34 @@
 						case LABOUR:
 							patient_queue.addToBack(*temp_ele);
 							break;
+						case ADMIT:
+							cout<<setw(20)<<"First Name"<<setw(20)<<"Last Name"<<setw(20)<<"Healthcard Number"<<setw(20)<<"Bed Number"<<setw(20)<<"Contraction Rate"<<setw(20)<<"Cervix Dilation"<<setw(20)<<"Condition\n";
+							for(int i=0; i<140; i++) cout<<"-";
+							cout<<"\n";
+							temp_ele->showpatients();
+
 						default:
 							break;
 					}
 					}
-					else cout<<"\n\nNo Patients in Queue!\n\n";
+					else cout<<"\n\nThere are no patients in queue!\n\n";
 
 
-					//examine patient
+
 					break;
+				//show queue; calls the registry function
 				case 3:
 					cout<<"\n\n|============================== Patient Queue ==============================|\n\n";
 					patient_queue.showQueue();
 					break;
+				//shows specific patients' detail, by calling the register function
 				case 4:
 					cout<<"\n\n|============================== Patient Detail ==============================|\n";
 
 						cout<<"Enter the patient's position in the queue:\n";
 						cin>>int_input;
 					if (int_input<0||int_input>patient_queue.backOfQueue()){
-						cout<<"\n\nNumber entered is not valid!\n\n";
+						cout<<"\n\nNo patient is in this position!\n\n";
 					}
 					else{
 
@@ -202,6 +219,7 @@
 
 
 					break;
+				//most urgent patient; calls the registry function
 				case 5:
 					cout<<"\n\n|============================== Most Urgent Patient ==============================|\n";
 					patient_queue.mostUrgent();
