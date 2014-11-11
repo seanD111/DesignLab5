@@ -7,8 +7,9 @@
 #include "seanfunctions.h"
 
 int main(){
-	int size=QUEUE_SIZE;
 
+	//asking for the size of the registry queue
+	int size=QUEUE_SIZE;
 	cout<<"Enter the size of the queue as a non-zero, positive integer: ";
     cin >> size;
     while ((!cin)||(size<=0)) {

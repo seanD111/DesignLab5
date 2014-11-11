@@ -208,11 +208,11 @@
 			}
 		}while (menu_select!=0);
 
-	}
-
-	void user::help_prompt(int err){
+		cout<<"\n\nLeaving Program";
 
 	}
+
+
 
 
 

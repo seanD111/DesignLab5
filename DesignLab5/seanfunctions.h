@@ -88,8 +88,6 @@ public:
 		~user();
 
 	//Functions//
-		//help function; takes an int and gives a help message, according to what help is needed
-		void help_prompt(int);
 	//basic menu function; will ask for user's input
 	void main_menu();
 
