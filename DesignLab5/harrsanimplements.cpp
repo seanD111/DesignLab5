@@ -103,7 +103,7 @@ enum_Status patient::examinepatients()//function for adding patients
 void patient::showpatients()
 {
 	cout<<setw(20)<<first_name<<setw(20)<<last_name<<setw(20)<<healthcard_number<<setw(20)<<bed_number<<setw(20)<<contraction_rate<<setw(20)<<cervix_dilation<<setw(20);
-	//prints patient information in one line
+	printstatus();//prints patient information in one line
 }
 
 
