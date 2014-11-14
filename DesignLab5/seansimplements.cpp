@@ -183,8 +183,8 @@
 						case ADMIT:
 							patient_queue.beds++;
 							temp_ele->bed_number=patient_queue.beds;
-							cout<<setw(20)<<"First Name"<<setw(20)<<"Last Name"<<setw(20)<<"Healthcard Number"<<setw(20)<<"Bed Number"<<setw(20)<<"Contraction Rate(min)"<<setw(20)<<"Cervix Dilation(cm)"<<setw(20)<<"Condition\n";
-							for(int i=0; i<140; i++) cout<<"-";
+							cout<<setw(20)<<"First Name"<<setw(20)<<"Last Name"<<setw(20)<<"Healthcard Number"<<setw(20)<<"Bed Number"<<setw(25)<<"Contraction Rate(min)"<<setw(25)<<"Cervix Dilation(cm)"<<setw(20)<<"Condition\n";
+							for(int i=0; i<150; i++) cout<<"-";
 							cout<<"\n";
 							temp_ele->showpatients();
 
@@ -213,9 +213,9 @@
 					}
 					else{
 
-					cout<<setw(20)<<"First Name"<<setw(20)<<"Last Name"<<setw(20)<<"Healthcard Number"<<setw(20)<<"Bed Number"<<setw(20)<<"Contraction Rate(min)"<<setw(20)<<"Cervix Dilation(cm)"<<setw(20)<<"Condition\n";
+					cout<<setw(20)<<"First Name"<<setw(20)<<"Last Name"<<setw(20)<<"Healthcard Number"<<setw(20)<<"Bed Number"<<setw(25)<<"Contraction Rate(min)"<<setw(25)<<"Cervix Dilation(cm)"<<setw(20)<<"Condition\n";
 
-					for(int i=0; i<140; i++) cout<<"-";
+					for(int i=0; i<150; i++) cout<<"-";
 					cout<<"\n";
 					*temp_ele=patient_queue.findEle(int_input);
 					temp_ele->showpatients();
