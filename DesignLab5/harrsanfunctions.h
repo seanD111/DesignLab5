@@ -33,11 +33,12 @@ patient();
 
 ~patient();
 
+int bed_number;
 string first_name;
 string last_name;
 int healthcard_number;
 enum_Status condition;
-int bed_number;
+
 int contraction_rate;
 int cervix_dilation;//each variable initialized in patient class
 

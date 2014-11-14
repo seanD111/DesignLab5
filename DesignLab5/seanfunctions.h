@@ -36,6 +36,7 @@ private:
 	element * queue;
 
 public:
+	int beds;
 //Constructors//
 	//default:
 	registry();

@@ -24,7 +24,6 @@ patient::patient()//sets patient data to start up values to be determined after 
 	first_name="";
 	last_name="";
 	healthcard_number=0;
-
 	bed_number=0;
 	contraction_rate=7;
 	cervix_dilation=0;
@@ -40,7 +39,7 @@ void patient::resetpatient(){//clears all patient data
 	last_name="";
 	healthcard_number=0;
 
-	bed_number=0;
+
 	contraction_rate=7;
 	cervix_dilation=0;
 }
